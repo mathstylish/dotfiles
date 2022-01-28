@@ -1,0 +1,39 @@
+# nvim to vim
+alias vim='lvim'
+
+# colorize grep (good for log files)
+alias grep='grep --color'
+alias egrep='egrep --color=auto'
+alias fgrep-'fgrep --color=auto'
+
+# colorize ls (see folder in blue color)
+alias ls='ls -h --color=auto'
+
+# delete directories
+alias rmd='rm -rf'
+
+# easier to read disk
+alias df='df -h'                # human readable size
+alias free='free -m'            # show size in MB
+
+# get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4 | head -5'
+# get top process eating cpu
+alias pscpu='ps auxf | sort -nr -k 3 | head -5'
+
+# systemd
+alias list_systemctl='systemctl list-unit-files --state=enabled'
+
+# tmp directory
+alias tmp='cd /tmp'
+
+# pacman
+alias pacman='sudo pacman'
+
+# zsh alias
+alias zed='vim $ZDOTDIR/.zshrc'
+alias zre='source $ZDOTDIR/.zshrc'
+
+# alias to remember me to use this commands instead
+alias cat='echo note: use less for large files and logs && cat'
+alias 'pip install'='echo use py -m pip install instead'

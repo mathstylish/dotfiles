@@ -1,0 +1,14 @@
+#!/bin/sh
+
+HISTSIZE=100000
+SAVEHIST=100000
+
+export PATH="$HOME/.local/bin":$PATH
+
+# asdf configuration
+. $HOME/.asdf/asdf.sh
+# asdf completions
+fpath=(${ASDF_DIR}/completions $fpath) # append completions to fpath
+
+# z
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh

@@ -1,0 +1,68 @@
+alias wiusr=$'echo "User System Resources: /usr, one of the biggest and where most of the applications that the user installs are located. It stands for User System Resources but in practice you can think of it as \'user\' or \'user programs\'. X, gnome apps, firefox, all these binaries are in /usr/bin and their dependency libraries are in /usr/lib and if they install the source code together, the codes are in /usr/src. If the user installs the -dev packages that bring the C or C++ header files for when it is necessary to compile dependencies, these files are in /usr/include. " | less'
+
+alias wivmlinuz=$'echo "Symbolic link located at /boot. Its the linux kernel it-
+self, the first binary executed in machine boot and it will start loading the OS
+and things like drivers. The reason it is a symlink is that in /boot we can have
+multiple versions of kernels. It also has a symbolic link which is a shortcut to
+the previous version with the suffix .old" | less'
+
+alias wiinitrd=$'echo "Symbolic link located at It\'s second binary executed in
+machine boot after vmlinuz, loading a ram disk. The vmlinuz has just the bare 
+minimum needed to boot and the rest of the modules come from this ram disk lo-
+aded from initrd.img. It is a convention of debian-derived systems such as ubun-
+tu.It also has a symbolic link which is a shortcut to the previous version with
+the suffix .old"  | less'
+
+alias wibiosbootproc=$'echo "
+1 - POST (Power On Self Test) to test tests if there is memory, video card, che-
+cks if buses are healthy, if has bios program and its contents in some versions,
+etc. On desktop PC\'s, it usually signals with a specific beep for a certain er-
+ror. It\'s on some laptops too.\U000A
+2 - Execute Basic I/O (BIOS).\U000A
+3 - BIOS looks for the first boot device defined in your configuration, accesses that device, reads the contents of the MBR, runs the program, which is the first stage of the bootloader.\U000A
+4 - First stage of the bootloader will continue loading the bootloader.\U000A
+5 - Loaded bootloader (GRUB).\U000A
+6 - With GRUB loaded, it will look for a configuration file, that configuration file, if found, will be able to show us a menu. GRUB also has a bunch of modules like FS to identify file systems, LUKS to identify disk encryption and LVM to identify logical volumes, among others\U000A.
+7 - Then GRUB will finally load what it needs to boot the operating system, initially loading the initrd (this initrd is normally closed/packaged) and preparing a virtual filesystem. GRUB also loads the kernel.\U000A
+8 - With the kernel loaded and running, it mounts the virtual filesystem (previously loaded by GRUB together with initrd) into its directory structure. It mounts this virtual filesystem, because it contains a script called init which is the init program that will make the kernel load some modules that will be needed to mount the real filesystem (the HD or SSD for example).\U000A
+9 - Set to run everything in the / directory, the first binary that will run is systemd which is a boot system. systemd runs a bunch of stuff to get all the services that have been configured to start with boot up and running." | less'
+
+alias wiuefibootproc=$'echo "
+1 - POST too (look step 1 at wibiosbootproc).\U000A
+2 - Execute UEFI (Unified Extensible Firmware Interface).\U000A
+3 - UEFI, being smarter, doesn\'t need to do step 3 and 4 (look at step 3 and 4 in wibiosbootproc).\U000A
+4 - (If secure boot is enable): What is loaded by UEFI will be checked against the signatures of the certificates that are embedded in the UEFI. In current stable versions of GNU/Linux Debian, there is a pre-bootloader called SHIM and this guy was digitally signed in a way that UEFI can load it (with secure boot enabled) because it has the signature that UEFI knows about and SHIM will load the bootloader (as it is linux system, so is GRUB). UEFI is so modern that it\'s possible to not have a bootloader (provided the kernel is prepared for it) and directly load the kernel and initrd.
+5 - The other steps is the same as bios (look at 6+ step in wibiosbootproc). \U000A." | less'
+
+alias widev=$'echo "/dev where it shows the devices connected to the machine. Some of these devices will be things like usb drivers, thumb drives, cd-roms and even floppy disks. To write to or read something from these devices, we need to mount them with a file system like exFAT, NTFS, HFS (APFS today) or EXT4 and when they are mounted we usually create a subdirectory in the /mnt directory or /average. Most modern linux have services to mount automatically when we insert a usb and these settings are in /etc/fstab.\U000A
+Use df -h to see all devices and where are his mount point." | less'
+
+alias wiroot=$'echo "Home equivalent of the root user who is the system. administrator located at /root"'
+
+alias wiopt=$'echo "directory where some outside programs can be installed."'
+
+alias wisbin=$'echo "/sbin where many of the operating system binaries like shutdown, disk management programs like fdisk (partitioning), fsck (checking), mkfs (formatting) and programs for network cards like ifup (raise) and if (down) to bring down network cards and stuff like that." | less'
+
+
+alias wibin=$'echo "/bin where are system programs like bash itself, other shells and simple things like the command cp, chown, chmod, cd, mkdir, rmdir, among others."'
+
+alias widotconfig=$'echo "~/.config, directory where specific settings for that user are"'
+
+alias wietc=$'echo "/etc, etc doesn\'t have a concept of what it really means, but most people like to think it means \'etc.\', quite a programmer thing."'
+
+alias wivar=$'echo "/var, directory where it contains variable data. In the past, /var/spool was used to be the print coil when using a printer, for example, and /var/mail for emails. /var/log is where all the main system logs go, /var/run has PID\'s (Process ID) of the processes being executed, var/cache serves to store some system caches as a font cache." | less'
+
+alias wiproc=$'echo "/proc, if you use ps command you can list running application processes and they have a numeric id. In /proc these processes are represented as a directory, you can see what\'s in them. For example, you can find the bash process with the ps command, then type cd /proc/<id> and if you list what\'s in that directory you\'ll see a bunch of pseudo files that aren\'t exactly like a text file you creates, but from the operating system\'s point of view, we can operate on them as if they were, for example, you can use the less command to see what\'s inside any of these files." | less'
+
+alias witmp=$'echo "/tmp, It\'s the directory where temporary stuff goes that the system doesn\'t guarantee will be there on the next boot, it\'s an ideal place for you to create and test things that you will throw away later"'
+
+alias wiless=$'echo "less (less is more), is a command similar to more command(deprecated), which lets you browse through long contents that do not fit on a screen, but less does it in streams, that is, instead of loading everything into memory, it pulls from the stream, only the which it needs to fill one screen at a time and navigate using the VI commands.\U000A j [down] \U000A k [up] \U000A gg [go to start of file] \U000A G [go to end of file] \U000A 10j [go 10 lines below] \U000A 5k [5 lines above] \U000A /<word> [search a word and use key n to go down] \U000A q [quit]" | less'
+
+alias witail=$'echo "tail is a command to see the end of the file and you can do things like: \U000A $ tail -10 a.txt (show the last ten lines of the file) \U000A $ tail -f a.txt (serves to be attached to the end of file, see example below) \U000A For this example, use the command above and then open a second shell (don''t close the current one) and in that second shell, write using echo command and connect the output of this echo to the end of the file a .txt and keep repeating this process and see what happens, complete command below!!\U000A $ echo hello world >> a.txt (| is the pipe symbol, which allows connecting the input (stdin) of one command to the output (stdout) of another)" | less'
+
+alias wigrep=$'echo "grep ([g]lobally search a [r]regular [e]xpression and [p]rint), is an old command that allows to process text, similar to perl 5. Nowadays we use others like ag which is silversearcher, which accepts similar regular expressions, but is much faster than grep. If you don\'t understand why it\'s called silver, it\'s because ag is the silver element in the periodic table.\U000A example:\U000A $ ps aux | grep bash [filters the output of system processes to show only lines that contain the word bash] \U000A $ ps aux | ag bash [same command with ag (install silversearcher-ag)]" | less'
+
+alias wiawk=$'echo "awk, is a command (programming language, similar to perl, for processing texts, being more specific) that allows for example to filter the output of commands, by column for example. See the example below. \U000A - Knowing that the PID column is the second(2) (i\'ll call <sec> for 2 for formatting reasons) column of the output of the ps aux command, we can filter this output to show the values of this column: \U000A $ ps aux | grep bash | awk { \'print $<sec>\' } [shows the values of the second column of the bash process]" | less'
+
+alias wigdb=$'echo " # Basics\U000A  1. Compile file with debugging symbols\U000A    $ gcc -std=c11(optional) -g file.c\U000A    \U2022 -g adds debugging symbols suitable for GDB to the compiled program.\U000A\U000A  2. Begin a gdb session and start \U000A    $ gdb file.out(or .exe)\U000A    (gdb) start\U000A\U000A  3. Commands\U000A    (gdb) step or s(short): step into any function calls on this line\U000A    \U2022 If you give the \'where\' command you will see the current function call stack\U000A\U000A    (gdb) next or n(short): step over (continue to the next line in the current frame)\U000A    \U2022 Function calls on current line are evaluated, but the debugger does not pause.\U000A\U000A    (gdb) finish or fin(short): step out (complete the current function call and return)\U000A    \U2022 This command works in all functions calls except for within main.\U000A\U000A #Inspect the state of your program\U000A   \U2022 The \'where\' (aliases: backtrace, bt) command prints stack frames\U000A     \U2022 The function name and argument values are printed first\U000A     \U2022 Where you see filename.c:## the numbers are the line number execution is currently paused at.\U000A\U000A   \U2022 You can list 10 lines of code centered around the current line (you can do it before start debug)\U000A       (gdb) list\U000A     \U2022 Or list a specific range of lines:\U000A       (gdb) list start_line, end_line\U000A       \U000A   \U2022 Information about the variables in function call\U000A     (gdb) info locals -local variables\U000A     (gdb) info args -arguments passed to a function call.\U000A\U000A   \U2022 Print variable\'s value or an expression:\U000A     \U2022 print [expression]\U000A       (gdb) print x\U000A       (gdb) print x > y\U00A\U00A #Be thoughful about where to pause the debugger.\U000A  \U2022 Stepping through a non-trivial program line by line is painful\U000A    \U2022 Better to instruct debugger when to pause and continue the execution until then.\U000A    \U2022 You can set many breakpoints and watchpoints in a program you\'re debugging.\U000A\U000A  \U2022 Some considerations\U000A    \U2022 You have to set breakpoints before starts you program.\U000A    \U2022 The start command automatically sets an implicit breakpoint automatically for you on the first line that runs and pauses the program there. The other way to start the program is with the command \'run\' which will go directly to the first breakpoint you set.\U000A    \U2022 If you get a warning like \'warning: Error disabling address space randomization: Operation not permitted\', don\'t worry about it.\U000A\U000A  \U2022 Breakpoints - pause at specific line \U000A     (gdb) break 26 (breakpoint at line 26)\U000A    \U2022 Shorthand\U000A     (gdb) br 26 (same above, but using shorthand)\U000A    \U2022 Multifile programs\U000A     (gdb) br [file.c:26]\U000A\U000A  \U2022 Conditional Breakpoints - pause at specific line if some expression is true \U000A     (gdb) break 26 if i == 3 (put breakpoint at line 26 if i is equal 3)\U000A     \U2022 Useful for put breakpoints in loops or frequently called functions when some expression is true.\U000A\U000A  \U2022 Watchpoints - pause when the value of an expression changes, print old a new values \U000A     (gdb) watch h (watch variable h when the value of i becomes greater than 10) \U000A     (gdb) watch h (watch variable h and will notify you when the value changes, there is no logical expression here, just watch h)\U000A     \U2022 Any identifiers (variable names) used in expression must be in scope when watch is made.\U000A\U000A  # Intentional Debug\U000A     \U2022 Before fixing a issue, be intentional about quickly reproducing it.\U000A     \U2022 Rather than starting gdb up and robotically retyping each command...\U000A       \U2022 ... make use of gdb\'s -ex execute arguments at the command line.\U000A\U000A     \U2022 You can \"script\" the commands you want to run gdb to run immediately:\U000A       \U2022 gdb -ex \'command one\' ... -ex \'command N\' [program]\U000A       \U2022 gdb -ex \'break 26\' -ex \'run\' -ex \'info locals\' ./a.out\U000A         \U2022 sets a breakpoint at line 26, runs the program, display info about locals once paused"| less'
+
