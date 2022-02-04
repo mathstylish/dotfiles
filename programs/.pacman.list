@@ -9,7 +9,6 @@ cheat
 clang
 cups
 debtap
-delta
 dialog
 discord
 bind
@@ -26,6 +25,7 @@ flameshot
 fzf
 gdb
 git
+git-delta
 github-cli
 glow-bin
 gnome-keyring
