@@ -51,7 +51,7 @@ neofetch,"A CLI system information tool written in BASH that supports displaying
 nerd-fonts-jetbrains-mono,"A Nerd Font patched version of JetBrains Mono."
 net-tools,"Configuration tools for Linux networking."
 noto-fonts-emoji,"Is an emoji font."
-ntfs-3g,"Allows accessing NTFS partitions.",
+ntfs-3g,"Allows accessing NTFS partitions."
 pamixer,"Is a command-line audio interface."
 picom-ibhagwan-git,"iBhagwan's compton|picom fork (X compositor) with dual_kawase blur and rounded corners."
 pipewire,"Is the audio system."
