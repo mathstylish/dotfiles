@@ -61,7 +61,7 @@ plocate,"Alternative to locate, faster and compatible with mlocate's database."
 pulsemixer,"Is an audio controller."
 python-pip,"The PyPA recommended tool for installing Python packages."
 qt5ct,"Qt5 Configuration Utility."
-ranger,"Simple, vim-like file manager written in Python",
+ranger,"Simple, vim-like file manager written in Python"
 rar,"A command-line port of the rar compression utility."
 reflector,"A Python 3 module and script to retrieve and filter the latest Pacman mirror list."
 rofi,"A window switcher, application launcher and dmenu replacement."
