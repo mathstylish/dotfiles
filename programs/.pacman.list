@@ -27,7 +27,7 @@ gdb
 git
 git-delta
 github-cli
-glow-bin
+glow
 gnome-keyring
 hack-font-ligature-nerd-font-git
 htop
@@ -75,7 +75,7 @@ rofi
 shfmt
 skippy-xd-git
 stow
-the_silver_seacher
+the_silver_searcher
 tldr
 tmux
 transmission-gtk
@@ -107,7 +107,7 @@ xorg-xrandr
 xorg-xwininfo
 zathura
 zip
-zoxide-bin
+zoxide
 zsh
 zsh-completions-git
 
