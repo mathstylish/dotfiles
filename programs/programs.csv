@@ -1,4 +1,4 @@
-#TAG (A: AUR, C: Cargo),NAME IN REPO (or git url),DESCRIPTION
+#TAG (A: AUR C: Cargo),NAME IN REPO (or git url),DESCRIPTION
 ,amd-ucode,"Microcode update image for AMD CPUs."
 ,archlinux-keyring,"Arch Linux PGP keyring."
 ,arandr,"Allows the user to customize monitor arrangements."
