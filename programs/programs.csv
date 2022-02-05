@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 NAME IN REPO,DESCRIPTION
 amd-ucode,"Microcode update image for AMD CPUs."
 archlinux-keyring,"Arch Linux PGP keyring."
@@ -114,6 +115,9 @@ zsh-completions-git,"Additional completion definitions for Zsh."
 
 =======
 #TAG (A means the package is in the AUR),NAME IN REPO (or git url),DESCRIPTION
+=======
+#TAG (A: AUR, C: Cargo),NAME IN REPO (or git url),DESCRIPTION
+>>>>>>> a3621e0 (Update packages list)
 ,amd-ucode,"Microcode update image for AMD CPUs."
 ,archlinux-keyring,"Arch Linux PGP keyring."
 ,arandr,"Allows the user to customize monitor arrangements."
@@ -145,6 +149,7 @@ A,debtap,"Convert .deb packages to Arch Linux packages."
 ,git-delta,"A viewer for git and diff output."
 ,github-cli,"The GitHub CLI."
 ,glow,"Command-line markdown renderer."
+C,grex,"Command-line tool to generate regex"
 ,gnome-keyring,"Serves as the system keyring."
 A,hack-font-ligature-nerd-font-git,"Nerd font patched Hack font with ligatures."
 ,htop,"Interactive process viewer."
