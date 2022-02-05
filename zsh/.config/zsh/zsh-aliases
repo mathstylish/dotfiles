@@ -1,19 +1,22 @@
 # nvim to vim
 alias vim='lvim'
 
-# colorize grep (good for log files)
-alias grep='grep --color'
-alias egrep='egrep --color=auto'
-alias fgrep-'fgrep --color=auto'
+# colorize grep and ag(good for log files)
+alias ag='ag --color-match="1;31"'
+alias grep='ag --color-match="1;31"'
 
-# colorize ls (see folder in blue color)
-alias ls='ls -h --color=auto'
+# list files
+alias ls='lsd'                   # normal list
+alias ll='lsd -1'                # long format (one per line)
+alias lh='lsd -lh'               # long format with size displayed using human-readable
+alias la='lsd -la'               # long format (permissions, ownership, size, and modification date)
+alias ld='lsd -d */'
 
 # delete directories
 alias rmd='rm -rf'
 
 # easier to read disk
-alias df='df -h'                # human readable size
+alias df='duf'                  
 alias free='free -m'            # show size in MB
 
 # get top process eating memory
@@ -35,5 +38,4 @@ alias zed='vim $ZDOTDIR/.zshrc'
 alias zre='source $ZDOTDIR/.zshrc'
 
 # alias to remember me to use this commands instead
-alias cat='echo note: use less for large files and logs && cat'
 alias 'pip install'='echo use py -m pip install instead'
