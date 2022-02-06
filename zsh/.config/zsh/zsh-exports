@@ -8,7 +8,8 @@ export PATH="$HOME/.local/bin":$PATH
 # asdf configuration
 . $HOME/.asdf/asdf.sh
 # asdf completions
-fpath=(${ASDF_DIR}/completions $fpath) # append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath) # append asdf completions to fpath
+fpath=(_btm $fpath) # append bottom completions to fpath
 
 # z
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
