@@ -1,8 +1,42 @@
+# Random Wallpaper Every Login 
+feh --bg-fill --randomize $HOME/Pictures/wallpapers/* &
+
+# Network Manager Applet
+nm-applet --indicator &
+
+# Speedy keys
+xset r rate 210 40
+
 # Environment variables set everywhere
-export EDITOR="lvim"
+export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
-export ZDOTDIR=$HOME/.config/zsh        # zsh config dir
+
+# For QT Themes
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+# Environment variables set everywhere
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
+
+# Compositor
+picom -b
+
+# Hide mouse when typing
+xbanish &
+
+# Screenshots
+flameshot &
+
+# Bluetooth systray icon
+blueman-applet &
+
+# remap caps to escape
+setxkbmap -option caps:escape
+
+# set keyboard layout
+setxkbmap -model pc105 -layout br -variant abnt2
+
+# zsh config dir
+export ZDOTDIR=$HOME/.config/zsh
