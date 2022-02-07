@@ -13,6 +13,7 @@ set $browser                --no-startup-id firefox
 set $explorer               --no-startup-id nautilus
 set $term_explorer          --no-startup-id $TERMINAL -e lf 
 set $proc_sys_monitor       --no-startup-id $TERMINAL -e btm
+set $lock                   --no-startup-id i3lock
 
 # font
 font pango:                 $font
@@ -81,22 +82,22 @@ bindsym $super+Shift+g		  gaps inner current set 0; gaps outer current set 0
 
 # h
 bindsym $super+h			      focus left
-bindsym $super+Shift+h		  move left 30                   # move tiling to left / floating 30 pixels to left
-bindsym $super+Ctrl+h		    move workspace to output left  # move workspace to left monitor (if you have)
+bindsym $super+Shift+h		  move left 30 px                                             
+bindsym $super+Ctrl+h		    move workspace to output left              # move workspace to left monitor (if you have)
 
 # j
 bindsym $super+j			      focus down
-bindsym $super+Shift+j		  move down 30
+bindsym $super+Shift+j		  move down 30 px
 bindsym $super+Ctrl+j		    move workspace to output down
 
 # k
 bindsym $super+k			      focus up
-bindsym $super+Shift+k		  move up 30
+bindsym $super+Shift+k		  move up 30 px
 bindsym $super+Ctrl+k		    move workspace to output up
 
 # l
 bindsym $super+l			      focus right
-bindsym $super+Shift+l		  move right 30
+bindsym $super+Shift+l		  move right 30 px
 bindsym $super+Ctrl+l		    move workspace to output right
 
 # z
@@ -104,6 +105,8 @@ bindsym $super+Ctrl+l		    move workspace to output right
 # x
 
 # c
+bindsym $super+c            exec $lock
+bindsym $super+Shift+c      exec $suspend
 
 # v
 
@@ -119,6 +122,20 @@ bindsym $super+Shift+Tab		workspace prev
 bindsym $super+apostrophe		split horizontal ;; exec $TERMINAL
 bindsym $super+slash		    split vertical ;; exec $TERMINAL    # vertical terminal
 bindsym $super+backslash		workspace back_and_forth            # go to last focused workspace, eg.: 1 to 3, 3 to 1          
+
+# #---Arrow Keys---# #
+bindsym $super+Left		      focus left
+bindsym $super+Shift+Left   resize shrink width 7 px or 7 ppt
+bindsym $super+Ctrl+Left		move workspace to output right
+bindsym $super+Down		      focus down
+bindsym $super+Shift+Down   resize shrink height 7 px or 7 ppt
+bindsym $super+Ctrl+Down		move workspace to output up
+bindsym $super+Up			      focus up
+bindsym $super+Shift+Up     resize grow height 7 px or 7 ppt
+bindsym $super+Ctrl+Up		  move workspace to output down
+bindsym $super+Right 		    focus right
+bindsym $super+Shift+Right  resize grow width 7 px or 7 ppt
+bindsym $super+Ctrl+Right		move workspace to output left
 
 
 # Use pactl to adjust volume in PulseAudio.
