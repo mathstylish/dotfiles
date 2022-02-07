@@ -39,3 +39,6 @@ alias zre='source $ZDOTDIR/.zshrc'
 
 # alias to remember me to use this commands instead
 alias 'pip install'='echo use py -m pip install instead'
+
+# copy my git personal token
+alias gt='xclip -sel clip ~/Documents/personaltokengit'
