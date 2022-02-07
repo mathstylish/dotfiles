@@ -5,7 +5,7 @@ feh --bg-fill --randomize $HOME/Pictures/wallpapers/* &
 nm-applet --indicator &
 
 # Speedy keys
-xset r rate 210 40
+xset r rate 205 35
 
 # Environment variables set everywhere
 export EDITOR="nvim"
