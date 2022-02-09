@@ -49,5 +49,3 @@ zsh_add_plugin "hlissner/zsh-autopair"
 
 # load compinit for working completions
 autoload -Uz compinit && compinit
-
-source /home/stylish/.config/broot/launcher/bash/br
