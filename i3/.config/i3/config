@@ -5,7 +5,7 @@ set $inner_gaps             7
 set $outer_gaps             0
 set $super                  Mod4
 set $alt                    Mod1
-set $font                   JetBrainsMono Nerd Font 10
+set $font                   JetBrainsMono Nerd Font, FontAwesome 10
 set $manualscreencapt       --no-startup-id flameshot gui -p $HOME/Pictures/screenshots
 set $entirescreencapt       --no-startup-id flameshot full -p $HOME/Pictures/screenshots
 set $applauncher            --no-startup-id rofi -show drun
@@ -140,9 +140,9 @@ bindsym $super+Ctrl+Right		move workspace to output left
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1  "
-set $ws2 "2  "
-set $ws3 "3  "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -211,13 +211,14 @@ set $txt_color #cccccc
 bar {
   status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
   position top
+  font pango: $font
   colors {
     background #232732
     statusline #cccccc
     separator #4b5262
 
     # colour of border, background, and text
-    focused_workspace       #2f343f #5396cf $txt_color
+    focused_workspace       #2f343f #315a78 $txt_color
     active_workspace        #2f343f #2f343f $txt_color
     inactive_workspace      #2f343f #2f343f $txt_color
     urgent_workspace       #2f343f #bb564c  $txt_color
