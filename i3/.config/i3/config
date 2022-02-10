@@ -113,6 +113,7 @@ bindsym $super+Shift+c      exec $suspend
 # b
 
 # n
+bindsym $super+shift+n       exec wifimenu
 
 # m
 
