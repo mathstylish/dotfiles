@@ -12,6 +12,9 @@ alias lh='lsd -lh'               # long format with size displayed using human-r
 alias la='lsd -la'               # long format (permissions, ownership, size, and modification date)
 alias ld='lsd -d */'
 
+# bat
+alias bat='bat --style=auto'
+
 # delete directories
 alias rmd='rm -rf'
 
