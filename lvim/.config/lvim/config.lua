@@ -10,7 +10,7 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = true
+lvim.format_on_save = false
 lvim.colorscheme = "onedarker"
 -- (uncomment if you want to hide the error texts and show them using gl shortcut)
 lvim.lsp.diagnostics.virtual_text = false
