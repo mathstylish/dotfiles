@@ -10,8 +10,11 @@ export HISTFILE=${XDG_DATA_HOME}/zsh/history
 HISTSIZE=100000
 SAVEHIST=100000
 
-# .local
+# .local binaries
 export PATH="$HOME/.local/bin":$PATH
+
+# Disable files
+export LESSHISTFILE=-
 
 # Java
 export JAVA_HOME="$HOME/.local/sdks/jdk-17.0.2"
