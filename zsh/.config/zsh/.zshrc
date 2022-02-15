@@ -1,7 +1,7 @@
 #!/bin/sh
 
-export ZDOTDIR=$HOME/.config/zsh
-HISTFILE=~/.zsh_history
+export ZDOTDIR="$HOME/.config/zsh"
+
 setopt appendhistory                                      # Append history to the history file (no overwriting)
 setopt sharehistory                                       # Share history across terminals
 setopt incappendhistory                                   # Immediately append to the history file, not just when a term is killed
@@ -49,3 +49,4 @@ zsh_add_plugin "hlissner/zsh-autopair"
 
 # load compinit for working completions
 autoload -Uz compinit && compinit
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
