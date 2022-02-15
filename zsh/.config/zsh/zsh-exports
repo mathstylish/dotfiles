@@ -1,17 +1,38 @@
 #!/bin/sh
 
+# XDG Base Directory
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+# Zsh
+export HISTFILE=${XDG_DATA_HOME}/zsh/history
 HISTSIZE=100000
 SAVEHIST=100000
 
+# .local
 export PATH="$HOME/.local/bin":$PATH
-export JAVA_HOME="$HOME/.jdk-installs/jdk-17.0.2"
+
+# Java
+export JAVA_HOME="$HOME/.local/sdks/jdk-17.0.2"
 export PATH="$JAVA_HOME/bin":$PATH
 
-# asdf configuration
+# NPM
+export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/npmrc
+
+# z
+export _Z_DATA="$XDG_DATA_HOME/z"
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
+# asdf
 . $HOME/.asdf/asdf.sh
-# asdf completions
 fpath=(${ASDF_DIR}/completions $fpath) # append asdf completions to fpath
 fpath=(_btm $fpath) # append bottom completions to fpath
 
-# z
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+# Enviroment variables
+export EDITOR="nvim"
+export TERMINAL="kitty"
+export BROWSER="firefox"
+
+# For QT Themes
+export QT_QPA_PLATFORMTHEME=qt5ct
