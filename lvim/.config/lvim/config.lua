@@ -14,6 +14,8 @@ lvim.format_on_save = false
 lvim.colorscheme = "onedarker"
 -- (uncomment if you want to hide the error texts and show them using gl shortcut)
 lvim.lsp.diagnostics.virtual_text = false
+-- disable background
+lvim.transparent_window = true
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
