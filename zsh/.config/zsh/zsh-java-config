@@ -1,0 +1,5 @@
+# change ~/.java to .config/java
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+
+# change ~/.android/ to .config/android
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android

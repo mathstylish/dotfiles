@@ -35,6 +35,7 @@ source "$ZDOTDIR/zsh-functions"
 
 # normal files to source
 zsh_add_file "zsh-exports"
+zsh_add_file "zsh-java-config"
 zsh_add_file "zsh-prompt"
 zsh_add_file "zsh-aliases"
 # zsh_add_file "zsh-vim-mode"
@@ -50,3 +51,4 @@ zsh_add_plugin "hlissner/zsh-autopair"
 # load compinit for working completions
 autoload -Uz compinit && compinit
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
+

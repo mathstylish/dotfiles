@@ -45,3 +45,6 @@ alias 'pip install'='echo use py -m pip install instead'
 
 # copy my git personal token
 alias gt='xclip -sel clip ~/Documents/personaltokengit'
+
+# wget alias
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'

@@ -16,12 +16,17 @@ export PATH="$HOME/.local/bin":$PATH
 # Disable files
 export LESSHISTFILE=-
 
-# Java
-export JAVA_HOME="$HOME/.local/sdks/jdk-17.0.2"
-export PATH="$JAVA_HOME/bin":$PATH
+# Gtk
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 
 # NPM
 export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/npmrc
+
+# VIM
+export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
+
+# wget
+export WGETRC=$XDG_CONFIG_HOME/wgetrc
 
 # z
 export _Z_DATA="$XDG_DATA_HOME/z"
