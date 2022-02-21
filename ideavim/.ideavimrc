@@ -33,6 +33,13 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
+"" move lines
+"up"
+inoremap <A-k> :action MoveStatementUp<CR>
+nnoremap <A-k> :action MoveStatementUp<CR>
+"down"
+inoremap <A-j> :action MoveStatementDown<CR>
+nnoremap <A-j> :action MoveStatementDown<CR>
 "" tab navigation
 nnoremap <s-K> :action PreviousTab<CR>
 nnoremap <s-J> :action NextTab<CR>
