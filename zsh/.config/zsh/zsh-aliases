@@ -8,7 +8,7 @@ alias grep='ag --color-match="1;31"'
 # list files
 alias ls='lsd'                   # normal list
 alias ll='lsd -1'                # long format (one per line)
-alias lh='lsd -lh'               # long format with size displayed using human-readable
+alias lh='lsd -A'               # long format with size displayed using human-readable
 alias la='lsd -la'               # long format (permissions, ownership, size, and modification date)
 alias ld='lsd -d */'
 
@@ -48,3 +48,6 @@ alias gt='xclip -sel clip ~/Documents/personaltokengit'
 
 # wget alias
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+
+# clear with scrollback clear
+alias clear="printf '\033[2J\033[3J\033[1;1H'"

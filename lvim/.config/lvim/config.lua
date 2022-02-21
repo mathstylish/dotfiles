@@ -16,7 +16,8 @@ lvim.colorscheme = "onedarker"
 lvim.lsp.diagnostics.virtual_text = false
 -- disable background
 lvim.transparent_window = true
-
+-- Relative number
+vim.opt.relativenumber = true
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
@@ -27,7 +28,6 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
 lvim.keys.normal_mode["<leader>vs"] = ":vsplit<cr>"
 lvim.keys.normal_mode["<leader>hs"] = ":split<cr>"
-lvim.keys.normal_mode["<leader>N"] = ":setlocal relativenumber!<cr>"
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
