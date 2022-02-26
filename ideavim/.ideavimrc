@@ -37,12 +37,14 @@ nnoremap <c-k> <c-w>k
 "up"
 inoremap <A-k> :action MoveStatementUp<CR>
 nnoremap <A-k> :action MoveStatementUp<CR>
+vnoremap <A-k> :action MoveStatementUp<CR>
 "down"
 inoremap <A-j> :action MoveStatementDown<CR>
 nnoremap <A-j> :action MoveStatementDown<CR>
+vnoremap <A-j> :action MoveStatementDown<CR>
 "" tab navigation
-nnoremap <s-K> :action PreviousTab<CR>
-nnoremap <s-J> :action NextTab<CR>
+nnoremap <s-J> :action PreviousTab<CR>
+nnoremap <s-K> :action NextTab<CR>
 """ Editing source code
 set ideajoin
 set idearefactormode=keep
@@ -86,3 +88,9 @@ nnoremap gp :action GotoSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
 nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
+"" Put semicolon end of line
+nnoremap <leader>kj <Esc>A;
+"" Create function structure and go to body
+nnoremap <leader>nn <Esc>A(<Esc>A {<CR>
+"" Create function structure and go to put parameters
+nnoremap <leader>mm <Esc>A(<Esc>A {<CR><Esc>kf(a
