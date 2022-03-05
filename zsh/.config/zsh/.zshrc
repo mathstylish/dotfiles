@@ -48,6 +48,10 @@ zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
 
+# Load ssh key for git
+/usr/bin/keychain -q $HOME/.ssh/git_id_ed25519
+. $HOME/.keychain/acer-sh
+
 # load compinit for working completions
 autoload -Uz compinit && compinit
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
