@@ -73,18 +73,6 @@
           "style": "diamond",
           "trailing_diamond": "\ue0b4",
           "type": "node"
-        },
-        {
-          "background": "#40c4ff",
-          "foreground": "#ffffff",
-          "invert_powerline": true,
-          "leading_diamond": " \ue0b6",
-          "properties": {
-            "template": " \uf5ef {{ .CurrentDate | date .Format }} "
-          },
-          "style": "diamond",
-          "trailing_diamond": "\ue0b4",
-          "type": "time"
         }
       ],
       "type": "prompt"
@@ -94,7 +82,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#21c7c7",
+          "foreground": "#0077c2",
           "properties": {
             "template": "\u2570\u2500"
           },
