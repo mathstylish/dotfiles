@@ -6,6 +6,9 @@ set clipboard+=ideaput
 set scrolloff=5
 "" highlights the search string while typing.
 set incsearch
+"" disable bell sound
+set visualbell
+set noerrorbells
 "" shows both the line number and the relative line number in the gutter.
 set number relativenumber
 "" leader key
